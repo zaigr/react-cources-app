@@ -1,0 +1,10 @@
+.Button {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-style: solid;
+    border-width: small;
+    border-color: purple;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+}

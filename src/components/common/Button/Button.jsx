@@ -1,11 +1,7 @@
-import './Button.css';
+import './button.css';
 
-function Button(props) {
-  return (
-    <a className='Button' href={props.link}>
-      {props.text}
-    </a>
-  );
-}
-
-export default Button;
+export const Button = ({ text, onClick }) => (
+  <button className='Button' onClick={onClick}>
+    {text}
+  </button>
+);

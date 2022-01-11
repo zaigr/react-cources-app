@@ -1,8 +1,5 @@
-import logo from './logo.png';
-import './Logo.css';
+import React from 'react';
 
-function Logo() {
-  return <img className='Logo' src={logo} alt='' />;
-}
+import './logo.css';
 
-export default Logo;
+export const Logo = () => <img className='Logo' src='./logo.png' alt='' />;

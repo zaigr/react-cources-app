@@ -1,11 +1,11 @@
-import Logo from './components/Logo/Logo';
-import Button from '../common/Button/Button';
-import Link from '../common/Link/Link';
-import './Header.css';
+import { Logo } from './components/Logo/Logo';
+import { Button } from '../common/Button/Button';
+
+import './header.css';
 
 function Header(props) {
   return (
-    <div className='Header'>
+    <header className='Header'>
       <div className='Header-logo'>
         <Logo />
       </div>
@@ -15,7 +15,7 @@ function Header(props) {
         </a>
         <Button link='#' text='Logout' />
       </div>
-    </div>
+    </header>
   );
 }
 

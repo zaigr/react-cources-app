@@ -13,7 +13,7 @@ function Header(props) {
         <a className='Header-account-link' href='#'>
           David
         </a>
-        <Button link='#' text='Logout' />
+        <Button text='Logout' />
       </div>
     </header>
   );

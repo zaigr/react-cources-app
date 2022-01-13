@@ -1,10 +1,13 @@
 import './input.css';
 
-export const Input = ({ placeholder, style, onChange }) => (
-  <input
-    className='Input'
-    style={style}
-    placeholder={placeholder}
-    onChange={onChange}
-  />
+export const Input = ({ placeholder, label, style, onChange }) => (
+  <label>
+    {label}
+    <input
+      className='Input'
+      style={style}
+      placeholder={placeholder}
+      onChange={onChange}
+    />
+  </label>
 );

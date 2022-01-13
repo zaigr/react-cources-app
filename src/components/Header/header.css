@@ -1,0 +1,30 @@
+.Header {
+    border-style: solid;
+    border-color: red;
+    border-width: small;
+    height: 100px;
+    max-height: 120px;
+}
+
+.Header-logo {
+    float: left;
+    padding-left: 2%;
+    height: 100px;
+}
+
+.Header-account {
+    float: right;
+    position: relative;
+    margin-right: 2%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.Header-account-link {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 0.5em 2.5em;
+    color: black;
+    user-select: none;
+}

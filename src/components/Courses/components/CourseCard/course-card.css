@@ -1,0 +1,19 @@
+.CourseCard {
+    border-style: solid;
+    border-color: green;
+    border-width: small;
+    margin: 0.5% 2% 0.5% 2%;
+    padding: 0% 2% 2% 1%;
+    display: inline-block;
+}
+
+.CourseCard-description {
+    float: left;
+    max-width: 70%;
+}
+
+.CourseCard-details {
+    float: right;
+    max-width: 30%;
+    margin-right: 15%;
+}

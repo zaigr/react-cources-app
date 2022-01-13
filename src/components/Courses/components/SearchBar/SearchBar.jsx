@@ -1,15 +1,28 @@
+import { useState } from 'react';
+
 import { Button } from '../../../common/Button/Button';
 import { Input } from '../../../common/Input/Input';
 
-import './search-bar.css';
+function SearchBar(props) {
+  const [inputText, setInputText] = useState(null);
 
-function SearchBar() {
+  function handleInputChange(event) {
+    if (!event.target.value) {
+      props.onSearchReset();
+    }
+
+    setInputText(event.target.value);
+  }
+
   return (
-    <div className='SearchBar'>
-      <Input placeholder='Enter course name...' />
-      <Button style={{ marginLeft: '1%' }} text='Search' />
-      <Button style={{ float: 'right' }} text='Add new course' />
-    </div>
+    <>
+      <Input placeholder='Enter course name...' onChange={handleInputChange} />
+      <Button
+        style={{ marginLeft: '1%' }}
+        text='Search'
+        onClick={() => props.onSearchSubmit(inputText)}
+      />
+    </>
   );
 }
 

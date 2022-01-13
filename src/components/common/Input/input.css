@@ -1,0 +1,8 @@
+.Input {
+    border-color: orange;
+    border-style: solid;
+    border-width: small;
+    outline: none;
+    width: 400px;
+    height: 34px;
+}

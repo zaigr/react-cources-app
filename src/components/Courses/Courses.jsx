@@ -1,5 +1,5 @@
+import SearchBar from './components/SearchBar/SearchBar';
 import CourseCard from './components/CourseCard/CourseCard';
-import { Button } from '../common/Button/Button';
 
 import {
   mockedCoursesList,
@@ -24,8 +24,7 @@ function Courses() {
 
   return (
     <div>
-      <Button text='Search' />
-      <Button text='Add new course' />
+      <SearchBar />
       <article>
         {courseList.map((course) => (
           <CourseCard key={course.id} course={course} />

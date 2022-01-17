@@ -8,7 +8,7 @@ import DataGenerator from '../../helpers/dataGenerator';
 
 import './courses.css';
 
-function Courses() {
+function Courses({ onAddNewCourse }) {
   const authorsList = useMemo(() => DataGenerator.getAuthors(), []);
   const coursesList = useMemo(() => getCoursesList(authorsList), [authorsList]);
 
@@ -49,7 +49,11 @@ function Courses() {
           onSearchSubmit={handleSearchSubmit}
           onSearchReset={handleSearchReset}
         />
-        <Button text='Add new course' style={{ float: 'right' }} />
+        <Button
+          text='Add new course'
+          style={{ float: 'right' }}
+          onClick={onAddNewCourse}
+        />
       </div>
       <article>
         {courses.map((course) => (

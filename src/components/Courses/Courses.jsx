@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 
+import Header from '../Header/Header';
 import SearchBar from './components/SearchBar/SearchBar';
 import CourseCard from './components/CourseCard/CourseCard';
 import { Button } from '../common/Button/Button';
@@ -43,24 +44,27 @@ function Courses({ onAddNewCourse }) {
   }
 
   return (
-    <div>
-      <div className='Courses-actionbar'>
-        <SearchBar
-          onSearchSubmit={handleSearchSubmit}
-          onSearchReset={handleSearchReset}
-        />
-        <Button
-          text='Add new course'
-          style={{ float: 'right' }}
-          onClick={onAddNewCourse}
-        />
+    <>
+      <Header />
+      <div>
+        <div className='Courses-actionbar'>
+          <SearchBar
+            onSearchSubmit={handleSearchSubmit}
+            onSearchReset={handleSearchReset}
+          />
+          <Button
+            text='Add new course'
+            style={{ float: 'right' }}
+            onClick={onAddNewCourse}
+          />
+        </div>
+        <article>
+          {courses.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
+        </article>
       </div>
-      <article>
-        {courses.map((course) => (
-          <CourseCard key={course.id} course={course} />
-        ))}
-      </article>
-    </div>
+    </>
   );
 }
 
